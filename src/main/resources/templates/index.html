@@ -15,6 +15,7 @@
         <table class="table table-bordered table-striped">
             <thead>
                 <tr>
+                    <th>Actions</th>
                     <th>Id</th>
                     <th>Description</th>
                     <th>Complete</th>
@@ -25,6 +26,16 @@
             
             <tbody>
                 <tr th:each="item : ${todoItems}">
+                    <td>
+                        <div class="btn-group" role="group">
+                            <a class="btn btn-default" th:href="@{/edit/{id}(id=${item.id})}">
+                                <span class="glyphicon glyphicon-pencil"></span>
+                            </a>
+                            <a class="btn btn-default" th:href="@{/delete/{id}(id=${item.id})}">
+                                <span class="glyphicon glyphicon-trash"></span>
+                            </a>
+                        </div>
+                    </td>
                     <td th:text="${item.id}">item_id</td>
                     <td th:text="${item.description}">item_description</td>
                     <td th:text="${item.complete}">item_complete</td>
