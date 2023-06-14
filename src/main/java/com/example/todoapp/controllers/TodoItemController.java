@@ -5,7 +5,6 @@ import com.example.todoapp.repositories.TodoItemRepository;
 
 import java.time.Instant;
 import java.time.LocalDate;
-import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
 import javax.validation.Valid;
