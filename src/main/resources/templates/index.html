@@ -11,7 +11,10 @@
 <body>
     <div class="container">
         <h1 class="text-center">Todo List</h1>
-        <p style="text-align: right;"><a class="btn btn-success" href="/create">Create</a></p>
+        <div class="row">
+            <p style="display: inline-block; margin-left: 15px;" th:text="|${today}|"></p>
+            <p style="text-align: right; float: right; margin-right: 15px;"><a class="btn btn-success" href="/create">Create</a></p>
+        </div>             
         <hr />
         <table class="table table-bordered table-striped">
             <thead>
