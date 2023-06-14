@@ -8,8 +8,7 @@ import javax.validation.constraints.NotBlank;
 
 import lombok.Getter;
 import lombok.Setter;
-import java.time.Instant;
-
+import java.time.LocalDateTime;
 @Entity
 @Table(name = "todo_item")
 public class TodoItem {
@@ -30,19 +29,19 @@ public class TodoItem {
 
     @Getter
     @Setter
-    private Instant createdDate;
+    private LocalDateTime createdDate;
 
     @Getter
     @Setter
-    private Instant modifiedDate;
+    private LocalDateTime modifiedDate;
 
     public TodoItem() {}
 
     public TodoItem(String description) {
         this.description = description;
         this.complete = false;
-        this.createdDate = Instant.now();
-        this.modifiedDate = Instant.now();
+        this.createdDate = LocalDateTime.now();
+        this.modifiedDate = LocalDateTime.now();
     }
     
     @Override

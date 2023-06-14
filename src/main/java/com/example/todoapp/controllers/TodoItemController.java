@@ -3,8 +3,8 @@ package com.example.todoapp.controllers;
 import com.example.todoapp.models.TodoItem;
 import com.example.todoapp.repositories.TodoItemRepository;
 
-import java.time.Instant;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 import javax.validation.Valid;
@@ -45,8 +45,9 @@ public class TodoItemController {
             return "add-todo-item";
         }
 
-        todoItem.setCreatedDate(Instant.now());
-        todoItem.setModifiedDate(Instant.now());
+        LocalDateTime now = LocalDateTime.now();
+        todoItem.setCreatedDate(now);
+        todoItem.setModifiedDate(now);
         todoItemRepository.save(todoItem);
         return "redirect:/";
     }
@@ -57,8 +58,8 @@ public class TodoItemController {
             todoItem.setId(id);
             return "update-todo-item";
         }
-
-        todoItem.setModifiedDate(Instant.now());
+        LocalDateTime now = LocalDateTime.now();
+        todoItem.setModifiedDate(now);
         todoItemRepository.save(todoItem);
         return "redirect:/";
     }
