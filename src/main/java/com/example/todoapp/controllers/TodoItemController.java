@@ -4,6 +4,9 @@ import com.example.todoapp.models.TodoItem;
 import com.example.todoapp.repositories.TodoItemRepository;
 
 import java.time.Instant;
+import java.time.LocalDate;
+import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 
 import javax.validation.Valid;
 
@@ -30,7 +33,10 @@ public class TodoItemController {
         logger.info("request to GET index");
         ModelAndView modelAndView = new ModelAndView("index");
         modelAndView.addObject("todoItems", todoItemRepository.findAll());
-        System.out.println(todoItemRepository);
+        LocalDate currentDate = LocalDate.now();
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd (E)");
+        String formattedDate = currentDate.format(formatter);
+        modelAndView.addObject("today", formattedDate);
         return modelAndView;
     }
 
