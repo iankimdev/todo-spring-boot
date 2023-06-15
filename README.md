@@ -34,6 +34,7 @@ Docker <br>
 
 ## EC2 Security Group
 <img width="1350" alt="Screen Shot 2023-06-15 at 11 02 16" src="https://github.com/iankimdev/spring-boot-todo/assets/120093816/517be943-dc50-4e6a-8b6d-3dce9885e8f1">
+
 ## Docker
 <img width="569" alt="Screen Shot 2023-06-15 at 11 03 30" src="https://github.com/iankimdev/spring-boot-todo/assets/120093816/9252866f-b904-4770-9ac5-3b6a01f310e0">
 <img width="718" alt="Screen Shot 2023-06-15 at 11 06 16" src="https://github.com/iankimdev/spring-boot-todo/assets/120093816/478514db-a3bd-4e3e-a7eb-f4137bc017a9">
